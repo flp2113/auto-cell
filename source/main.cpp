@@ -4,8 +4,10 @@
 
 #include "defs.h"
 #include "./Screen/Screen.h"
+#include "./Grid/Grid.h"
 
 static grz::Screen* screen = new grz::Screen();
+static grz::Grid* gr = new grz::Grid(screen);
 
 /* This function runs once at startup. */
 SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
@@ -19,10 +21,12 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
 /* This function runs when a new event (mouse input, keypresses, etc) occurs. */
 SDL_AppResult SDL_AppEvent(void* appstate, SDL_Event* event)
 {
-    if (event->type == SDL_EVENT_KEY_DOWN ||
-        event->type == SDL_EVENT_QUIT) {
+    if (event->type == SDL_EVENT_QUIT) {
         return SDL_APP_SUCCESS;  /* end the program, reporting success to the OS. */
     }
+
+    gr->handleInput(event);
+
     return SDL_APP_CONTINUE;
 }
 
@@ -31,6 +35,10 @@ SDL_AppResult SDL_AppIterate(void* appstate)
 {
     SDL_SetRenderDrawColor(screen->renderer, 0, 0, 0, 255);
     SDL_RenderClear(screen->renderer);
+
+    gr->update();
+    gr->render();
+
     SDL_RenderPresent(screen->renderer);
 
     return SDL_APP_CONTINUE;
