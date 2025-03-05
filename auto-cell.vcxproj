@@ -144,13 +144,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Grid\Grid.cpp" />
-    <ClCompile Include="source\Particle\Particle.h" />
     <ClCompile Include="source\Screen\Screen.cpp" />
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Grid\Grid.h" />
     <ClInclude Include="source\defs.h" />
     <ClInclude Include="source\Screen\Screen.h" />
   </ItemGroup>

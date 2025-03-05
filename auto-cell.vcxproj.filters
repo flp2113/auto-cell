@@ -21,21 +21,12 @@
     <ClCompile Include="source\Screen\Screen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Grid\Grid.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Particle\Particle.h">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Screen\Screen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\defs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Grid\Grid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
