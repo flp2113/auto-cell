@@ -1,0 +1,7 @@
+#pragma once
+
+#define WINDOW_WIDTH 1280
+#define WINDOW_HEIGHT 720
+#define MIN_WINDOW_WIDTH 640
+#define MIN_WINDOW_HEIGHT 480
+
