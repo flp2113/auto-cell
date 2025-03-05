@@ -1,9 +1,7 @@
 #pragma once
 
 #include <SDL3/SDL.h>
-
 #include <vector>
-
 #include "../defs.h"
 #include "../Screen/Screen.h"
 #include "../Particle/Particle.h"

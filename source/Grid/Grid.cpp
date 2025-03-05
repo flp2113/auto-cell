@@ -1,5 +1,4 @@
 #include "Grid.h"
-
 #include <iostream>
 
 grz::Grid::Grid(Screen* screen) : particleCounter(0), screen(screen)
