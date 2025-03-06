@@ -14,7 +14,7 @@ namespace grz
 	public:
 		int particleCounter;
 		Screen* screen;
-		std::vector<std::vector<Particle_Type>> grid;
+		std::vector<std::vector<Particle>> grid;
 
 		Grid(Screen* screen);
 
@@ -25,7 +25,7 @@ namespace grz
 
 	private:
 		void updateParticle(int x, int y);
-		void renderParticle(int x, int y, Particle_Type type);
+		void renderParticle(int x, int y, Particle* particle);
 	};
 
 }
